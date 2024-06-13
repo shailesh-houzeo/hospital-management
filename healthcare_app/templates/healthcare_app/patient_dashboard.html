@@ -1,0 +1,24 @@
+{% extends 'healthcare_app/base.html' %}
+
+{% block title %}Patient Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome, {{ patient.name }}</h2>
+<p><strong>Username:</strong> {{ patient.username }}</p>
+<p><strong>Email:</strong> {{ patient.email }}</p>
+<p><strong>Age:</strong> {{ patient.age }}</p>
+<p><strong>Gender:</strong> {{ patient.gender }}</p>
+<p><strong>Phone Number:</strong> {{ patient.phone_number }}</p>
+<p><strong>Address:</strong> {{ patient.address }}</p>
+
+<h3>Your Appointments</h3>
+<ul class="list-group">
+    {% for appointment in appointments %}
+        <li class="list-group-item">
+            <strong>Doctor:</strong> {{ appointment.doctor }}<br>
+            <strong>Date:</strong> {{ appointment.date_time }}<br>
+            <strong>Reason:</strong> {{ appointment.reason }}<br>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

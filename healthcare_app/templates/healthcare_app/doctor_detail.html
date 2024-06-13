@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Details</title>
+</head>
+<body>
+    <h1>Dr. {{ doctor.first_name }} {{ doctor.last_name }}</h1>
+    <p>Specialization: {{ doctor.get_specialization_display }}</p>
+    <p>Bio: {{ doctor.bio }}</p>
+</body>
+</html>

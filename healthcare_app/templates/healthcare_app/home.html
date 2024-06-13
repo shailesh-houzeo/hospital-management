@@ -1,0 +1,8 @@
+{% extends 'healthcare_app/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Healthcare Project</h1>
+<a href="{% url 'appointment_list' %}">View Appointments</a>
+{% endblock %}
