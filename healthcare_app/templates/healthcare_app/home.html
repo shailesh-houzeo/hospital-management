@@ -1,8 +1,31 @@
 {% extends 'healthcare_app/base.html' %}
 
+{% load static %} <!-- Load the static template tag library -->
+
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>Welcome to the Healthcare Project</h1>
-<a href="{% url 'appointment_list' %}">View Appointments</a>
+<style>
+    /* Custom styles for the healthcare app */
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.text-center {
+    padding-top: 50px;
+}
+
+</style>
+<div class="text-center my-5">
+    <h1 class="display-4">Welcome to the Healthcare Project</h1>
+    <img src="{% static 'healthcare_app/banner.jpeg' %}" alt="Healthcare Banner" class="img-fluid my-4">
+    <br>
+    <br>
+    <br>
+    <a href="/admin" class="btn btn-primary btn-lg">Login</a>
+</div>
 {% endblock %}
