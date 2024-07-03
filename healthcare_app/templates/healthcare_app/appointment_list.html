@@ -7,7 +7,7 @@
     <h1>Appointments</h1>
     <ul>
         {% for appointment in appointments %}
-            <li>{{ appointment.date_time }} - {{ appointment.patient.name }} with Dr. {{ appointment.doctor.first_name }} {{ appointment.doctor.last_name }}</li>
+            <li>{{ appointment.date_time }} - {{ appointment.patient.name }} with {{ appointment.doctor.first_name }} {{ appointment.doctor.last_name }}</li>
         {% endfor %}
     </ul>
 </body>
