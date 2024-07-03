@@ -78,7 +78,7 @@ class Appointment(models.Model):
     status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='S')
     
     def __str__(self):
-        return f"Appointment with Dr. {self.doctor} on {self.date_time}"
+        return f"Appointment with {self.doctor} on {self.date_time}"
 
 
 class MedicalRecord(models.Model):
