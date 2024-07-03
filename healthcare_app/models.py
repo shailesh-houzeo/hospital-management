@@ -183,7 +183,7 @@ class DoctorInformation(models.Model):
     experience = models.PositiveIntegerField()
     
     def __str__(self):
-        return f"Information for Dr. {self.doctor}"
+        return f"Information for {self.doctor}"
 
 
 class DischargeSummary(models.Model):
